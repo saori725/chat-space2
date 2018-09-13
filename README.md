@@ -37,12 +37,12 @@ has_many :messages
 has_many :members
 
 
-## membersテーブル
+## group_membersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true, add_index|
+|group_id|integer|null: false, foreign_key: true, add_index|
 
 ### Association
 - belongs_to :group
