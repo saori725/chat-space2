@@ -67,8 +67,8 @@ has_many :messages
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true, add_index|
+|group_id|integer|null: false, foreign_key: true, add_index|
 |text|text||
 |image|string||
 
