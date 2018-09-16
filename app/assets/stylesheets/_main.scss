@@ -1,33 +1,33 @@
 .main {
-	float: right;
 	background-color: $white;
 	height: 100vh;
 	width: calc(100vw - 300px);
+	float: right;
 	position: relative;
 	&_top {
 		height: 100px;
+		padding-right: 40px;
 		display: flex;
 		justify-content: space-between;
-		padding-right: 40px;
 		&_left {
 			padding: 0 40px;
 			&_group-name {
-				font-size: 20px;
 				color: $black;
-				padding: 35px 0 15px 0;
 				width: 200px;
+				font-size: 20px;
+				padding: 35px 0 15px 0;
 			}
 			&_member {
-				font-size: 12px;
 				color: $textGray;
+				font-size: 12px;
 			}
     	}
 		&_edit {
 			color: $lightBlue;
 			height: 40px;
 			line-height: 40px;
-			margin-top: 28px;
 			padding: 0 20px;
+			margin-top: 28px;
 			border: solid 1px $lightBlue;
 			a {
 				text-decoration: none;
@@ -45,19 +45,19 @@
 			padding-top: 46px;
 			&_message {
 				&_user-name {
-					font-size: 16px;
 					color: $lightNavy;
+					font-size: 16px;
 					font-weight: bold;
-					padding-right: 10px;
 					float: left;
+					padding-right: 10px;
 				}
 				&_day {
-					font-size: 12px;
 					color: $textGray;
+					font-size: 12px;
 				}
 				&_text {
-					font-size: 14px;
 					color: $lightNavy;
+					font-size: 14px;
 					padding-top: 10px;
 					clear: both;
 				}
@@ -66,32 +66,31 @@
 	}
 	&_footer{
 		background-color: $white;
-		position: absolute;
-		bottom: 0;
 		height: 50px;
 		width: calc(100vw - 300px);
-		padding: 20px 40px;
 		float: right;
+		padding: 20px 40px;
+		position: absolute;
+		bottom: 0;
 		&_box {
-			display: flex;
-			height: 50px;
 			background-color: $white;
+			height: 50px;
+			display: flex;
 			.input {
-				font-size: 16px;
 				color: $lightNavy;
-				border: none;
+				width: 40vw;
+				font-size: 16px;
 				line-height: 50px;
 				padding-left: 10px;
-				width: 40vw;
 				border: solid $lightNavy;
 			}
 			.image {
-				height: 50px;
 				background-color: $white;
+				height: 50px;
 				padding: 0 10px 0 23px;
 				.fa-image {
-					line-height: 50px;
 					color: $black;
+					line-height: 50px;
 					a:visited {
 					color: $white;
 					}
@@ -101,9 +100,9 @@
 				background-color: $lightBlue;
 				color: $white;
 				line-height: 50px;
+				float: right;
 				padding: 0 25px;
 				margin-left: 15px;
-				float: right;
 				border: none;
 			}
 		}
