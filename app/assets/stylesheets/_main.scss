@@ -5,105 +5,105 @@
   float: right;
   position: relative;
   &__top {
-	height: 100px;
-	padding-right: 40px;
-	display: flex;
-	justify-content: space-between;
-	&__left {
-	  padding: 0 40px;
-	  &__group-name {
-		color: $black;
-		width: 200px;
-		font-size: 20px;
-		padding: 35px 0 15px 0;
-	  }
-	  &__member {
-		color: $textGray;
-		font-size: 12px;
-	  }
+		height: 100px;
+		padding-right: 40px;
+		display: flex;
+		justify-content: space-between;
+		&__left {
+		  padding: 0 40px;
+		  &__group-name {
+				color: $black;
+				width: 200px;
+				font-size: 20px;
+				padding: 35px 0 15px 0;
+		  }
+		  &__member {
+				color: $textGray;
+				font-size: 12px;
+		  }
     }
-	&__edit {
-	  color: $lightBlue;
-	  height: 40px;
-	  line-height: 40px;
-	  padding: 0 20px;
-	  margin-top: 28px;
-	  border: solid 1px $lightBlue;
-	  a {
-		text-decoration: none;
-		&:visited {
+		&__edit {
 		  color: $lightBlue;
-		}
-	  }
-	}
-  }
-  &__bottom {
-	background-color: $lightGray;
-	height: calc(100vh - 100px);
-	padding: 0 40px;
-	&__message-list {
-	  padding-top: 46px;
-	  &__message {
-		&__user-name {
-		  color: $lightNavy;
-		  font-size: 16px;
-		  font-weight: bold;
-		  float: left;
-		  padding-right: 10px;
-		}
-		&__day {
-		  color: $textGray;
-		  font-size: 12px;
-		}
-		&__text {
-		  color: $lightNavy;
-		  font-size: 14px;
-		  padding-top: 10px;
-		  clear: both;
-		}
-	  }
-	}
-  }
-  &__footer{
-	background-color: $white;
-	height: 50px;
-	width: calc(100vw - 300px);
-	float: right;
-	padding: 20px 40px;
-	position: absolute;
-	bottom: 0;
-	&__box {
-	  background-color: $lightNavy;
-	  height: 50px;
-	  display: flex;
-	  .input {
-		color: $lightNavy;
-		width: 40vw;
-		font-size: 16px;
-		line-height: 50px;
-		padding-left: 10px;
-	  }
-	  .image {
-		background-color: $white;
-		height: 50px;
-		padding: 0 10px 0 23px;
-		.fa-image {
-		  color: $black;
-		  line-height: 50px;
-		  a:visited {
-			color: $white;
+		  height: 40px;
+		  line-height: 40px;
+		  padding: 0 20px;
+		  margin-top: 28px;
+		  border: solid 1px $lightBlue;
+		  a {
+				text-decoration: none;
+				&:visited {
+				  color: $lightBlue;
+				}
 		  }
 		}
-	  }
-	  .submit {
-		background-color: $lightBlue;
-		color: $white;
-		line-height: 50px;
+  }
+  &__bottom {
+		background-color: $lightGray;
+		height: calc(100vh - 100px);
+		padding: 0 40px;
+		&__message-list {
+		  padding-top: 46px;
+		  &__message {
+				&__user-name {
+				  color: $lightNavy;
+				  font-size: 16px;
+				  font-weight: bold;
+				  float: left;
+				  padding-right: 10px;
+				}
+				&__day {
+				  color: $textGray;
+				  font-size: 12px;
+				}
+				&__text {
+				  color: $lightNavy;
+				  font-size: 14px;
+				  padding-top: 10px;
+				  clear: both;
+				}
+	  	}
+		}
+  }
+  &__footer{
+		background-color: $white;
+		height: 50px;
+		width: calc(100vw - 300px);
 		float: right;
-		padding: 0 25px;
-		margin-left: 15px;
-		border: none;
-	  }
-	}
+		padding: 20px 40px;
+		position: absolute;
+		bottom: 0;
+		&__box {
+		  background-color: $lightNavy;
+		  height: 50px;
+		  display: flex;
+		  .input {
+				color: $lightNavy;
+				width: 40vw;
+				font-size: 16px;
+				line-height: 50px;
+				padding-left: 10px;
+		  }
+		  .image {
+				background-color: $white;
+				height: 50px;
+				padding: 0 10px 0 23px;
+				.fa-image {
+				  color: $black;
+				  line-height: 50px;
+				  a:visited {
+						color: $white;
+				  }
+				}
+	  	}
+		  .submit {
+				background-color: $lightBlue;
+				color: $white;
+				line-height: 50px;
+				float: right;
+				padding: 0 25px;
+				margin-left: 15px;
+				border: none;
+		  }
+		}
   }
 }
