@@ -3,7 +3,7 @@
   height: 100vh;
   width: 300px;
   float: left;
-  &_top {
+  &__top {
 	background-color: #253141;
 	color: $white;
 	height: 100px;
@@ -12,13 +12,13 @@
 	display: flex;
 	display: table-cell;
 	vertical-align: middle;
-	&_name {
+	&__name {
 	  font-size: 16px;
 	  font-weight: bold;
 	  float: left;
 	  padding-left: 20px;
 	}
-	&_icon {
+	&__icon {
 	  float: left;
 	  padding: 0 20px;
 	  display: flex;
@@ -30,15 +30,15 @@
 	  }
 	}
   }
-  &_bottom {
-	&_group {
+  &__bottom {
+	&__group {
 	  color: $white;
 	  padding: 20px;
-	  &_group-name {
+	  &__group-name {
 		font-size: 15px;
 		padding-bottom: 5px;
 	  }
-	  &_group-message {
+	  &__group-message {
 		font-size: 11px;
 	  }
 	}

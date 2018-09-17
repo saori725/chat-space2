@@ -4,25 +4,25 @@
   width: calc(100vw - 300px);
   float: right;
   position: relative;
-  &_top {
+  &__top {
 	height: 100px;
 	padding-right: 40px;
 	display: flex;
 	justify-content: space-between;
-	&_left {
+	&__left {
 	  padding: 0 40px;
-	  &_group-name {
+	  &__group-name {
 		color: $black;
 		width: 200px;
 		font-size: 20px;
 		padding: 35px 0 15px 0;
 	  }
-	  &_member {
+	  &__member {
 		color: $textGray;
 		font-size: 12px;
 	  }
     }
-	&_edit {
+	&__edit {
 	  color: $lightBlue;
 	  height: 40px;
 	  line-height: 40px;
@@ -37,25 +37,25 @@
 	  }
 	}
   }
-  &_bottom {
+  &__bottom {
 	background-color: $lightGray;
 	height: calc(100vh - 100px);
 	padding: 0 40px;
-	&_message-list {
+	&__message-list {
 	  padding-top: 46px;
-	  &_message {
-		&_user-name {
+	  &__message {
+		&__user-name {
 		  color: $lightNavy;
 		  font-size: 16px;
 		  font-weight: bold;
 		  float: left;
 		  padding-right: 10px;
 		}
-		&_day {
+		&__day {
 		  color: $textGray;
 		  font-size: 12px;
 		}
-		&_text {
+		&__text {
 		  color: $lightNavy;
 		  font-size: 14px;
 		  padding-top: 10px;
@@ -64,7 +64,7 @@
 	  }
 	}
   }
-  &_footer{
+  &__footer{
 	background-color: $white;
 	height: 50px;
 	width: calc(100vw - 300px);
@@ -72,7 +72,7 @@
 	padding: 20px 40px;
 	position: absolute;
 	bottom: 0;
-	&_box {
+	&__box {
 	  background-color: $white;
 	  height: 50px;
 	  display: flex;
