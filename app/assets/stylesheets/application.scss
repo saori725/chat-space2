@@ -1,8 +1,9 @@
 @import "./reset";
-@import "./variables";
+@import "./variable";
+@import "font-awesome";
 @import "./header";
-@import "./sidebar";
+@import "./sideber";
 @import "./main";
-@import "modules/user";
-@import "messages/messages.scss"
+@import "./messages";
+
 

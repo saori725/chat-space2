@@ -1,0 +1,36 @@
+.header
+  .header__message message
+.sideber
+  .sideber__top
+    .sideber__top__name user-name
+    %ul.sideber__top__icon
+      %li
+        = link_to "#" do
+          = fa_icon "edit"
+      %li
+        = link_to "#" do
+          = fa_icon "cog"
+  .sideber__bottom
+    .sideber__bottom__group
+      .sidebaer__bottom__group-name group name 
+      .sideber__bottom__group-message message 
+.main
+  .main__header
+    .main__header__left
+      .main__header__left__group-name group name
+      .main__header__left__member MEMBER: 
+    .main__header__edit
+      %a{:href => ""} edit
+  .main__contents
+    .main__contents__message-list
+      .main__contents__message-list__message
+        .main__contents__message-list__message__user-name user-name
+        .main__contents__message-list__message__day day
+        .main__contents__message-list__message__text text
+  .main__footer
+    %form.main__footer__body
+      %input{:placeholder => "type a message", :type => "text", :class => "input"}
+      .image
+        = link_to "#" do
+          = fa_icon "image"
+      %input{:type => "submit", :value => "Send", :class => "submit"}

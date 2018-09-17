@@ -1,112 +1,108 @@
 .main {
+  float: right;
   background-color: $white;
   height: 100vh;
   width: calc(100vw - 300px);
-  float: right;
   position: relative;
-  &__top {
-		height: 100px;
-		padding-right: 40px;
-		display: flex;
-		justify-content: space-between;
-		&__left {
-		  padding: 0 40px;
-		  &__group-name {
-				color: $black;
-				width: 200px;
-				font-size: 20px;
-				padding: 35px 0 15px 0;
-		  }
-		  &__member {
-				color: $textGray;
-				font-size: 12px;
-		  }
+  &__header {
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    &__left {
+      &__group-name {
+        font-size: 20px;
+        color: $black;
+        padding: 35px 0 15px 0;
+        width: 200px;
+      }
+      &__member {
+        font-size: 12px;
+        color: $textGray;
+      }
     }
-		&__edit {
-		  color: $lightBlue;
-		  height: 40px;
-		  line-height: 40px;
-		  padding: 0 20px;
-		  margin-top: 28px;
-		  border: solid 1px $lightBlue;
-		  a {
-				text-decoration: none;
-				&:visited {
-				  color: $lightBlue;
-				}
-		  }
-		}
+    &__edit {
+      color: $mainBlue;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 28px;
+      padding: 0 20px;
+      border: solid 1px $mainBlue;
+      a {
+        text-decoration: none;
+        &:visited {
+          color: $mainBlue;
+        }
+      }
+    }
   }
-  &__bottom {
-		background-color: $lightGray;
-		height: calc(100vh - 100px);
-		padding: 0 40px;
-		&__message-list {
-		  padding-top: 46px;
-		  &__message {
-				&__user-name {
-				  color: $lightNavy;
-				  font-size: 16px;
-				  font-weight: bold;
-				  float: left;
-				  padding-right: 10px;
-				}
-				&__day {
-				  color: $textGray;
-				  font-size: 12px;
-				}
-				&__text {
-				  color: $lightNavy;
-				  font-size: 14px;
-				  padding-top: 10px;
-				  clear: both;
-				}
-	  	}
-		}
+  &__contents {
+    background-color: $lightGray;
+    height: calc(100vh - 100px - 90px);
+    padding: 0 40px;
+    &__message-list {
+      padding-top: 16px;
+      &__message {
+        padding: 20px 0;
+        &__user-name {
+          font-size: 16px;
+          color: $textNavy;
+          font-weight: bold;
+          padding-right: 10px;
+          float: left;
+        }
+        &__time {
+          font-size: 12px;
+          color: $textGray;
+        }
+        &__text {
+          font-size: 14px;
+          color: $textNavy;
+          padding-top: 10px;
+          clear: both;
+        }
+      }
+    }
   }
   &__footer{
-		background-color: $white;
-		height: 50px;
-		width: calc(100vw - 300px);
-		float: right;
-		padding: 20px 40px;
-		position: absolute;
-		bottom: 0;
-		&__box {
-		  background-color: $lightNavy;
-		  height: 50px;
-		  display: flex;
-		  .input {
-				color: $lightNavy;
-				width: 40vw;
-				font-size: 16px;
-				line-height: 50px;
-				padding-left: 10px;
-		  }
-		  .image {
-				background-color: $white;
-				height: 50px;
-				padding: 0 10px 0 23px;
-				.fa-image {
-				  color: $black;
-				  line-height: 50px;
-				  a:visited {
-						color: $white;
-				  }
-				}
-	  	}
-		  .submit {
-				background-color: $lightBlue;
-				color: $white;
-				line-height: 50px;
-				float: right;
-				padding: 0 25px;
-				margin-left: 15px;
-				border: none;
-		  }
-		}
-	}
+    background-color: $gray;
+    position: absolute;
+    bottom: 0;
+    width: calc(100vw - 380px);
+    padding: 20px 40px;
+    &__body {
+      display: flex;
+      .input {
+        font-size: 16px;
+        color: $textNavy;
+        border: none;
+        line-height: 50px;
+        padding-left: 10px;
+        width: calc(100% - 110px);
+      }
+      .image {
+        height: 50px;
+        padding-right: 10px;
+        background-color: $white;
+        .fa-image {
+          line-height: 50px;
+          color: $black;
+          a:visited {
+            color: $white;
+          }
+        }
+      }
+      .submit {
+        background-color: $mainBlue;
+        color: $white;
+        line-height: 50px;
+        padding: 0 25px;
+        margin-left: 15px;
+        border: none;
+        float: right;
+      }
+    }
+  }
 }
-
 
 

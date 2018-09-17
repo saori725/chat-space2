@@ -1,12 +1,12 @@
 .header {
-  background-color: $lightBlue;
+  background-color: $mainBlue;
   height: 20px;
   width: 100vw;
   &__message {
-	color: $white;
-	font-size: 14px;
-	line-height: 20px;
-	text-align: center;
+		color: $white;
+		font-size: 14px;
+		line-height: 20px;
+		text-align: center;
   }
 }
 
