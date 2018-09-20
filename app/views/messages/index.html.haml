@@ -1,24 +1,9 @@
-.header
-  .header__message message
-.sideber
-  .sideber__top
-    .sideber__top__name user-name
-    %ul.sideber__top__icon
-      %li
-        = link_to "#" do
-          = fa_icon "edit"
-      %li
-        = link_to "#" do
-          = fa_icon "cog"
-  .sideber__bottom
-    .sideber__bottom__group
-      .sidebaer__bottom__group-name Sample グループ
-      .sideber__bottom__group-message message 
+= render 'layouts/sideber'
 .main
   .main__header
     .main__header__left
       .main__header__left__group-name Sample グループ
-      .main__header__left__member MEMBER: 
+      .main__header__left__member MEMBER:
     .main__header__edit
       %a{:href => ""} edit
   .main__contents
@@ -27,10 +12,12 @@
         .main__contents__message-list__message__user-name ryosukemachira
         .main__contents__message-list__message__day 2016/10/02 06:27:07
         .main__contents__message-list__message__text なるほど
-  .main__footer
-    %form.main__footer__body
-      %input{:placeholder => "type a message", :type => "text", :class => "input"}
-      .image
-        = link_to "#" do
-          = fa_icon "image"
-      %input{:type => "submit", :value => "Send", :class => "submit"}
+  .from
+    = form_for [@group, @message] do |f|
+      .from__body
+        .form__mask
+        = f.text_field :text, class: 'from__body__message', placeholder: 'type a message'
+        = f.label :image, class: 'from__body__mask__image' do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'submit'

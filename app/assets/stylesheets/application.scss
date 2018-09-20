@@ -1,7 +1,11 @@
-@import "./reset";
-@import "./variable";
 @import "font-awesome";
-@import "./header";
-@import "./sideber";
-@import "./main";
-@import "./messages";
+@import "config/colors";
+@import "config/reset";
+@import "config/variable";
+@import "modules/flash";
+@import "modules/sideber";
+@import "modules/user";
+@import "modules/group";
+@import "modules/header";
+@import "modules/main";
+@import "modules/messages";
