@@ -1,0 +1,10 @@
+.main__body__message-list__message
+  .main__body__message-list__message__user-name
+    = message.user.name
+  .main__body__message-list__message__time
+    = message.created_at
+  .main__body__message-list__message__text
+    - if message.text.present?
+      %p.main__body__message-list__message__text
+        = message.text
+      = image_tag message.image.url, class: "main__body__message-list__message__image" if message.image.present?
