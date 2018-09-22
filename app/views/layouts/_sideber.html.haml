@@ -1,7 +1,7 @@
 .sideber
   .top
     %h3.top__name
-      ユーザーネーム
+      = current_user.name
     %ul.top__lists
       %li.list
         = link_to new_group_path do

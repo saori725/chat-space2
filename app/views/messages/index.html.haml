@@ -1,23 +1,22 @@
-= render 'layouts/sideber'
+= render '/layouts/sideber', locals: { messages: @messages }
+
 .main
   .main__header
     .main__header__left
-      .main__header__left__group-name Sample グループ
-      .main__header__left__member MEMBER:
-    .main__header__edit
-      %a{:href => ""} edit
-  .main__contents
-    .main__contents__message-list
-      .main__contents__message-list__message
-        .main__contents__message-list__message__user-name ryosukemachira
-        .main__contents__message-list__message__day 2016/10/02 06:27:07
-        .main__contents__message-list__message__text なるほど
-  .from
+      .main__header__left__group-name
+        current-group-name
+      .main__header__left__member MEMBER: AAA BBB CCC
+    .main__header__edit  edit
+  .main__body
+    .main__body__message-list
+      = render @messages
+  .form
     = form_for [@group, @message] do |f|
-      .from__body
-        .form__mask
-        = f.text_field :text, class: 'from__body__message', placeholder: 'type a message'
-        = f.label :image, class: 'from__body__mask__image' do
-          = fa_icon 'picture-o', class: 'icon'
-          = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'submit'
+      = f.text_field :text, class: "form__message", placeholder: "type a message"
+      .form__mask
+        = f.label :image, class: "form__mask__image" do
+          = fa_icon "image", class: "icon"
+          = f.file_field :image, class: "hidden"
+      = f.submit "Send", class: "form__submit"
+
+
