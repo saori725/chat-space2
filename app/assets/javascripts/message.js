@@ -1,6 +1,5 @@
 $ (function() {
   function buildHTML(message) {
-    // console.log(message);
     message.image ? image = `<img src="${message.image}" class="message__image">` : image = ""
     var html = `<div class="main__body__message-list__message">
                   <div class="main__body__message-list__message__user-name">
@@ -38,16 +37,16 @@ $ (function() {
       contentType: false,
     })
     .done(function(data) {
-      console.log(data);
       var html = buildHTML(data);
       $('.main__body__message-list').append(html);
-      $('.form__message').val('');
-      $('.hidden').val('');
-      $('.form__submit').prop('disabled', false);
+      $('.form').val('');
       scrollBottom();
     })
     .fail(function() {
       alert('自動メッセージ取得に失敗しました');
-    });
+    })
+    .always(function(){
+      $('.form__submit').prop("disabled", false);
+    })
   });
 });
