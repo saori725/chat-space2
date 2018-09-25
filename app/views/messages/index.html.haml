@@ -4,9 +4,12 @@
   .main__header
     .main__header__left
       .main__header__left__group-name
-        current-group-name
-      .main__header__left__member MEMBER: AAA BBB CCC
-    .main__header__edit  edit
+        = @group.name
+      .main__header__left__member
+        MEMBER:
+        = @group.users.pluck(:name).join(", ")
+    .main__header__edit
+      = link_to "edit", edit_group_path(@group)
   .main__body
     .main__body__message-list
       = render @messages
@@ -18,5 +21,3 @@
           = fa_icon "image", class: "icon"
           = f.file_field :image, class: "hidden"
       = f.submit "Send", class: "form__submit"
-
-

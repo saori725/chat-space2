@@ -22,12 +22,16 @@
       %label.chat-group-form__label{:for => "chat_group_チャットメンバー"} チャットメンバー
     .chat-group-form__field--right
       #chat-group-users
-        / .chat-group-user.clearfix#chat-group-user-22
-        / %input{name: 'chat_group[user_ids][]', type:'hidden', value: 'group.id'}
-        / %p.chat-group-user__name
+        - @group.users.each do |user|
+          .chat-group-user.clearfix.js-chat-member#chat-group-user-8
+            = f.hidden_field :user_id, class: 'chat_member_id', value: user.id, name: "group[user_ids][]"
+            %p.chat-group-user__name
+              = user.name
+            - unless user.name == current_user.name
+              %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn
+                削除
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
     .chat-group-form__field--right
       = f.submit class: 'chat-group-form__action-btn'
 
-      / = f.collection_check_boxes :user_ids, User.all, :id, :name
