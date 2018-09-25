@@ -6,7 +6,6 @@
       .main__header__left__group-name
         = @group.name
       .main__header__left__member
-        MEMBER:
         = @group.users.pluck(:name).join(", ")
     .main__header__edit
       = link_to "edit", edit_group_path(@group)

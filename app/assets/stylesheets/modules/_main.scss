@@ -40,6 +40,7 @@
     background-color: $lightGray;
     height: calc(100vh - 100px - 90px);
     padding: 0 40px;
+    overflow:scroll;
     &__message-list {
       padding-top: 16px;
       &__message {
@@ -60,46 +61,50 @@
           color: $textNavy;
           padding-top: 10px;
           clear: both;
+          .message__image{
+            height: 300px;
+            width: 300px;
+          }
         }
       }
     }
   }
-}
-.form{
-  background-color: $gray;
-  position: absolute;
-  bottom: 0;
-  width: calc(100vw - 380px);
-  padding: 20px 40px;
-  &__message {
-    float: left;
-    font-size: 16px;
-    color: $textNavy;
-    border: none;
-    height: 50px;
-    padding-left: 10px;
-    width: calc(100% - 155px);
-  }
-  &__mask{
-    height: 50px;
-    padding-right: 10px;
-    float: left;
-    background-color: $white;
-    &__image {
+  .form{
+    background-color: $gray;
+    position: absolute;
+    bottom: 0;
+    width: calc(100vw - 380px);
+    padding: 20px 40px;
+    &__message {
+      float: left;
+      font-size: 16px;
+      color: $textNavy;
+      border: none;
+      height: 50px;
+      padding-left: 10px;
+      width: calc(100% - 155px);
+    }
+    &__mask{
+      height: 50px;
+      padding-right: 10px;
+      float: left;
       background-color: $white;
-      line-height: 50px;
-      .hidden {
-        display: none;
+      &__image {
+        background-color: $white;
+        line-height: 50px;
+        .hidden {
+          display: none;
+        }
       }
     }
-  }
-  &__submit {
-    background-color: $mainBlue;
-    color: $white;
-    line-height: 50px;
-    padding: 0 25px;
-    margin-left: 15px;
-    border: none;
-    float: right;
+    &__submit {
+      background-color: $mainBlue;
+      color: $white;
+      line-height: 50px;
+      padding: 0 25px;
+      margin-left: 15px;
+      border: none;
+      float: right;
+    }
   }
 }
