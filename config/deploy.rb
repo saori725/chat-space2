@@ -1,8 +1,8 @@
 # config valid only for current version of Capistrano
-lock '<Capistranoのバージョン>'
+lock '~> 3.11.0'
 
-set :application, '自身のアプリケーション名'
-set :repo_url,  'git@github.com:<Githubのユーザー名>/<レポジトリ名>.git'
+set :application, 'chat-space2'
+set :repo_url,  'git@github.com:saori725/chat-space2.git'
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
@@ -10,7 +10,7 @@ set :rbenv_type, :user
 set :rbenv_ruby, '2.3.1'
 
 set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['<ローカルPCのEC2インスタンスのSSH鍵(pem)へのパス>']  ※例：/Users/yusukeyamane/.ssh/key_pem.pem
+                  keys: ['</Users/apple/.ssh/z36.pem>']
 
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
