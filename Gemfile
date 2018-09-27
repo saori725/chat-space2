@@ -64,3 +64,8 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'jquery-turbolinks'
+
+group :production do
+  gem 'unicorn'
+end
+
