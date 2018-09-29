@@ -60,8 +60,9 @@ $ (function() {
         data: {id: last_message_id}
       })
 
+
       .done(function(message_list){
-        if (message_list != null){
+        if (message_list != null ){
           message_list.forEach(function(message) {
             var insert = buildHTML(message);
             $('.main__body__message-list').append(insert);
