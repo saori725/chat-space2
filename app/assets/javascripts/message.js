@@ -18,14 +18,20 @@ $ (function() {
     return html;
   };
 
+
+//自動スクロールする関数
   function scrollBottom(){
     $(".main__body").animate({scrollTop: $(".main__body")[0].scrollHeight}, 'slow')
   }
 
+
+// イベント。発火設定
   $('#new_message').on('submit', function(e) {
     e.preventDefault();
 
+// イベント。発火設定
     var formData = new FormData(this);
+// フォームに入力された内容を取得
     var href = $(this).attr('action');
     $.ajax({
       url: href,
@@ -35,23 +41,29 @@ $ (function() {
       processData: false,
       contentType: false,
     })
+
+    // ajax処理が成功した場合
     .done(function(data) {
       var html = buildHTML(data);
-      $('.main__body__message-list').append(html)
-      $('.form__message').val('');
+      $('.main__body__message-list').append(html); // 入力された値をHTML反映
+      $('.form__message').val(''); // 入力された値をリセット
       $('.hidden').val('');
       scrollBottom();
     })
     .fail(function() {
       alert('自動メッセージ取得に失敗しました');
     })
+    //ajax処理が失敗した場合
     .always(function(){
-      $('.form__submit').prop("disabled", false);
+      $('.form__submit').prop("disabled", false); //submit処理を有効化
     })
   });
 
+
+//自動更新
   var interval = setInterval(function() {
-    var last_message_id = $(".main__body__message-list__message").last().data('message-id');
+    // チャットグループの最新のメッセージのidを取得
+    var last_message_id = $(".main__body__message-list__message").data('message-id');
 
     if (location.pathname.match(/\/groups\/\d+\/messages/)) {
       $.ajax({
@@ -60,21 +72,22 @@ $ (function() {
         data: {id: last_message_id}
       })
 
-
+      // ajax処理が成功した場合の処理
       .done(function(message_list){
         if (message_list != null ){
           message_list.forEach(function(message) {
             var insert = buildHTML(message);
-            $('.main__body__message-list').append(insert);
+            $('.main__body__message-list').append(insert); // 入力された値をHTML反映
             scrollBottom();
           });
         }
       })
 
+      // Ajax処理が失敗した時の処理
       .fail(function(){
         alert('メッセージの自動更新に失敗しました');
       });
     } else {
     clearInterval(interval);
-  }}, 3*1000 );
+  }}, 5*1000 ); //5秒ごと
 });
